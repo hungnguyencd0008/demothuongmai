@@ -1,0 +1,134 @@
+thongtin_kh.html
+
+
+chitietsp.html
+
+ct_don_dathang.html
+
+cart.html
+
+////////////////
+CSDL
+các bảng
+
+categories
+comment
+products
+users
+slide
+
+
+
+
+///////////////////////////////
+
+
+Table_Advertise.jpg
+Bảng Quảng Cáo
+
+Table_Menu.jpg
+Bảng Menu
+
+Table_Contact.jpg
+Bảng Liên Hệ
+
+Table_GroupProduct.jpg
+Bảng Nhóm Sản phẩm
+
+Table_Support.jpg
+Bảng Hỗ trợ
+
+Table_Province.jpg
+Bảng Tỉnh/ Thành phố
+
+Table_Shop.jpg
+Bảng Sản phẩm Phân phối
+
+Table_Product.jpg
+Bảng Chi tiết Sản phẩm
+
+Table_Order.jpg
+Bảng Đặt hàng
+
+Table_Customers.jpg
+Bảng Khách hàng
+
+Table_OrderDetail.jpg
+Bảng Chi tiết Đặt hàng
+
+Table_Users.jpg
+Bảng Người dùng
+
+Table_Company.jpg
+Bảng Công ty
+
+
+/////////////////////////////
+https://www.youtube.com/watch?v=-H9577DrJHQ&list=PLShhnaMcz_Zy1ipos-PUP9UrJauBkKUza
+
+admin
+user(thành viên)
+catalog(danh mục sản phẩm)
+product(sản phẩm)
+transaction(luy lịch sử giao dịch)
+order(chi tiết đơn hàng)
+contact(liên hệ)
+video
+support
+slide
+news
+menu
+maker
+content_static
+comment
+admin_group
+info
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+https://daynhauhoc.com/t/xin-gop-y-ve-co-so-du-lieu-thuong-mai-dien-tu/55193
+
+sinhvienit.net/forum/can-tu-van-database-quan-ly-cua-hang-mua-ban-dien-thoai-di-dong.292012.html
+
+thietkeweb247.com.vn/thiet-ke-website/mo-hinh-website-thuong-mai-dien-tu-tong-hop/
+
+https://tamnguyen.com.vn/tam-quan-trong-cua-viec-thiet-ke-co-so-du-lieu-trong-thiet-ke-web-thuong-mai-dien-tu.html
+
+
+hocphp.info/huong-dan-tao-co-du-lieu-cho-web-ban-hang/
+
+
+https://kungfuphp.com/php-co-ban/tao-co-so-du-lieu-tao-website-bang-php.html
+
+dotnet.edu.vn/ChuyenMuc/TUTXay-dung-Website-Ban-Hang--Huong-dan-tao-DataBase-468.aspx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://handsomeroot.blogspot.com/2015/10/share-csdl-quan-ly-shop-online.html

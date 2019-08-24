@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>list user</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/datepicker3.css" rel="stylesheet">
+<link href="../css/styles.css" rel="stylesheet">
+<script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
+<script src="../js/lumino.glyphs.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Admin</a>
+				<ul class="user-menu">
+					<li class="dropdown pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> User <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+							
+		</div><!-- /.container-fluid -->
+	</nav>
+		
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<ul class="nav menu">
+			<li role="presentation" class="divider"></li>
+			<li class="active"><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Trang chủ</a></li>
+			<li><a href="widgets.html"><svg class="glyph stroked calendar"><use xlink:href="#stroked-calendar"></use></svg>Danh mục Sản phẩm</a></li>
+			<li><a href="charts.html"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg>Quản lý Người Dùng </a></li>
+			<li role="presentation" class="divider"></li>
+		</ul>
+		
+	</div><!--/.sidebar-->
+
+
+
+
+<br>
+
+
+<div class="container">
+    <div id="navbar" class="row">
+    	<div class="col-sm-10 col-lg-offset-2">
+        	<nav class="navbar navbar-default">
+  				<div class="container-fluid">
+                	<ul class="nav navbar-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Users</a></li>
+                        <li><a href="#">Add user</a></li>
+                	</ul>
+                    <p id="logout" class="navbar-text navbar-right"><a class="navbar-link" href="#">Logout</a></p>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+    	<div class="col-sm-10 col-lg-offset-2">
+        	<div class="alert alert-success">Added user success!</div>
+        	<table class="table table-striped">
+            	<tr id="tbl-first-row">
+                	<td width="5%">#</td>
+                    <td width="30%">Fullname</td>
+                    <td width="25%">Username</td>
+                    <td width="25%">Email</td>
+                    <td width="5%">Level</td>
+                    <td width="5%">Edit</td>
+                    <td width="5%">Delete</td>
+                </tr>
+                <tr>
+                	<td>1</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana</td>
+                    <td>nguyenvana@gmail.com</td>
+                    <td>2</td>
+                    <td><a href="#">Edit</a></td>
+                    <td><a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                	<td>2</td>
+                    <td>Lê Thị B</td>
+                    <td>lethib</td>
+                    <td>lethib@gmail.com</td>
+                    <td>2</td>
+                    <td><a href="#">Edit</a></td>
+                    <td><a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                	<td>3</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana</td>
+                    <td>nguyenvana@gmail.com</td>
+                    <td>2</td>
+                    <td><a href="#">Edit</a></td>
+                    <td><a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                	<td>4</td>
+                    <td>Lê Thị B</td>
+                    <td>lethib</td>
+                    <td>lethib@gmail.com</td>
+                    <td>2</td>
+                    <td><a href="#">Edit</a></td>
+                    <td><a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                	<td>5</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana</td>
+                    <td>nguyenvana@gmail.com</td>
+                    <td>2</td>
+                    <td><a href="#">Edit</a></td>
+                    <td><a href="#">Delete</a></td>
+                </tr>
+                <tr>
+                	<td>6</td>
+                    <td>Lê Thị B</td>
+                    <td>lethib</td>
+                    <td>lethib@gmail.com</td>
+                    <td>2</td>
+                    <td><a href="#">Edit</a></td>
+                    <td><a href="#">Delete</a></td>
+                </tr>
+			</table>
+            <div aria-label="Page navigation">
+            	<ul class="pagination">
+                	<li>
+                    	<a aria-label="Previous" href="#">
+                        	<span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li>
+                    	<a href="#" aria-label="Next">
+        					<span aria-hidden="true">&raquo;</span>
+      					</a>
+      				</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+	<script src="../js/jquery-1.11.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/chart.min.js"></script>
+	<script src="../js/chart-data.js"></script>
+	<script src="../js/easypiechart.js"></script>
+	<script src="../js/easypiechart-data.js"></script>
+	<script src="../js/bootstrap-datepicker.js"></script>
+	<script>
+		$('#calendar').datepicker({
+		});
+
+		!function ($) {
+		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){          
+		        $(this).find('em:first').toggleClass("glyphicon-minus");      
+		    }); 
+		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+	</script>	
+</body>
+
+</html>

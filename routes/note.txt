@@ -1,0 +1,412 @@
+php artisan make:controller Admin\LoginController
+
+php artisan make:migration vp_user --create=vp_user
+php artisan migrate
+
+php artisan make:seed UserTableSeeder
+
+php artisan db:seed --class=UserTableSeeder
+
+artisan make:controller Admin\HomeController
+php artisan make:middleware CheckLogedIn
+php artisan make:middleware CheckLogedOut
+
+
+
+///////////////////////////////////
+
+
+
+php artisan make:controller Admin\CategoryController
+
+
+
+
+/////////
+php artisan make:migration vp_category_rieng --create=vp_category_rieng
+php artisan migrate
+php artisan make:seed categoryriengseeder
+php artisan db:seed --class=categoryriengseeder
+php artisan make:model Model\categoryRieng
+
+php artisan make:migration vp_product_rieng --create=vp_product_rieng
+php artisan make:model Model\productRieng
+php artisan migrate
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+
+
+
+php artisan make:controller Admin\ProductController
+
+
+php artisan make:migration vp_product_chung --create=vp_product_chung
+
+php artisan migrate
+
+php artisan make:model Model\productChung
+
+php artisan make:request AddCategoryChungRequest
+
+php artisan make:request EditProductChungRequest
+
+php artisan make:request EditProductChungRequest
+
+
+
+
+
+
+
+
+
+
+
+
+<---------------------------------------------------------------------------------------->
+đăng nhập-đăng xuất-master page
+
+
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\app\User.php
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\app\Http\Kernel
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\app\Http\Controllers\Admin\LoginController,(HomeController)
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\app\Http\Middleware\tạo file ,(tạo file )
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\database\migrations\2019_06_18_191419_vp_user
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\database\seeds\UserTableseeder
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\routes\web.php
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\resources\views\backend\master.blade,(login.blade),(index.blade)
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\resources\views\erors\note.blade
+
+file LoginController sử lý đăng nhập
+file Kernel đăng ký 2 file CheckLogedIn,CheckLogedOut
+file CheckLogedIn,CheckLogedOut  kiểm tra login và logout để hiển thị trang giao diện phù hợp
+hàm getLogout trong file HomeController để logout ra khổi trang admin,hàm getHome để hiển thị trang giao diện admin
+file 2019_06_18_191419_vp_user để tạo cấu trúc bảng user
+file UserTableseeder để tạo dl cho bảng user
+file note.blade để hiển thị thông báo thành công hay thất bại
+
+b1:tao file 2019_06_18_191419_vp_user và UserTableseeder để tạo cấu trúc bảng và thêm dl mẫu
+b2:file login là gd đăng nhập và tao file LoginController để kiểm tra đăng nhập 
+nếu đăng nhập thành công thì hiển thị tra trang index,ngược lại báo lỗi
+b3:tạo file CheckLogedIn và CheckLogedOut  kiểm tra login và logout để hiển thị trang giao diện phù hợp
+
+
+<---------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+<---------------------------------------------------------------------------------------->
+thêm-sửa-xóa category 
+
+
+
+
+
+
+php artisan make:controller Admin\CategoryController
+php artisan make:request AddCategoryRequest
+php artisan make:request EditCategoryRequest
+php artisan make:model Models\CategoryModel
+php artisan make:migration vp_category 
+
+php artisan make:seed CategoryTableSeeder
+
+
+php artisan make:migration vp_category_dienthoai
+php artisan migrate
+
+php artisan make:seed CategoryDienThoaiTableSeeder
+php artisan db:seed --class=CategoryDienThoaiTableSeeder
+
+php artisan make:model Models\CategoryDienThoaiModel
+
+
+
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\app\Models\CategoryDienThoaiModel
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\routes\web.php
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\app\Http\Controllers\Admin\CategoryController
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\database\migrations\2019_06_23_095653_vp_category_dienthoai
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\database\seeds\CategoryTableSeeder
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\app\Http\RequestsAddCategoryRequest,(EditCategoryRequest)
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\resources\views\backend\dienthoai\AddListcategory.blade,(editcategory.blade)
+
+
+-file CategoryDienThoaiModel để kết nối với bảng dl
+-file 2019_06_23_095653_vp_category_dienthoai và CategoryTableSeeder để tạo cấu trúc bảng và tạo dl
+-file RequestsAddCategoryRequest và EditCategoryRequest để validate form nhập dl
+-file AddListcategory và editcategory là file giao diện để thêm và edit
+-file CategoryController để thực hiện các tác vụ như thêm,sửa, xóa,hiển thị
+getCate
+postCate
+getEditCate
+postEditCate
+getDeleteCate
+
+
+///////////////////////////////////////////////////
+
+
+
+php artisan make:migration vp_category_tablet
+php artisan migrate
+
+php artisan migrate
+php artisan make:model MOdels\CategoryTabletModel
+php artisan make:migration vp_category_laptop
+php artisan migrate
+php artisan make:model Models\CategoryLaptopModel
+
+
+php artisan make:migration vp_category_phukien
+php artisan make:model Models\CategoryPhuKienModel
+php artisan make:migration vp_category_dongho
+php artisan make:model Models\CategoryDongHoModel
+php artisan make:migration vp_category_dienmay
+php artisan make:model Models\CategoryDienMayModel
+
+php artisan migrate
+
+
+
+
+
+
+
+<---------------------------------------------------------------------------------------->
+
+
+
+
+
+
+<---------------------------------------------------------------------------------------->
+TÍCH HỢP CKEDITOR VÀ CKFINDER 
+
+
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\public\editor\ckfinder\config.php(dong 29,69)
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\resources\views\backend\dienthoai\addproduct.blade,(editproduct.blade)
+
+
+<---------------------------------------------------------------------------------------->
+
+
+
+
+
+
+<---------------------------------------------------------------------------------------->
+thêm-sửa-xóa product 
+
+php artisan make:controller Admin\ProductController
+
+php artisan make:migration vp_products_dienthoai
+php artisan make:migration vp_products_tablet
+php artisan make:migration vp_products_laptop
+php artisan make:migration vp_products_phukien
+php artisan make:migration vp_products_dongho
+php artisan make:migration vp_products_dienmay
+php artisan migrate
+
+php artisan make:model Models\ProductDienThoaiModel
+php artisan make:model Models\ProductTabletModel
+php artisan make:model Models\ProductLaptopModel
+php artisan make:model Models\ProductPhuKienModel
+php artisan make:model Models\ProductDongHoModel
+php artisan make:model Models\ProductDienMayModel
+
+
+
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\app\Http\Controllers\Admin\ProductController
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\resources\views\backend\dienthoai\addproduct.blade,(listproduct.blade),(editproduct.blade)
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\resources\views\backend\product_link.blade
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\routes\web.php
+
+
+
+hàm postAddProduct_chung trong file ProductController để thêm dl,hàm postEditProduct_chung để sủa dl, hàm deleteProduct_chung để xóa dl,hàm getAddProduct_chung và getEditProduct_chung để hiện thị gd thêm,sửa dl
+b1:
+-tạo các file trong Models để kết nối với bảng dl
+-tạo các file trong migration để tạo cấu trúc bảng
+b2:
+-sử lý hiển thị dl ở các file addproduct,listproduct,editproduct
+-file ProductController để thực hiện thêm,sửa,xóa product
+
+
+<---------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+<---------------------------------------------------------------------------------------->
+-HIỂN THỊ ĐIỆN THOẠI NỔI BẬT NHẤT,TABLET..... RA TRANG TRỦ
+
+
+php artisan make:controller Frontend\FrontendController
+
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\app\Http\Controllers\Frontend\FrontendController
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\resources\views\frontend\master.blade,(index.blade)
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\routes\web.php
+
+
+hàm getHome trong file FrontendController để hiển thị sản phẩm nổi bật nhất ra trang chủ
+
+
+<---------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+<---------------------------------------------------------------------------------------->
+HIỂN THỊ DỮ LIỆU CÁC MENU (ĐIỆN THOẠI,TABLET,LAPTOP,PHỤ KIỆN,ĐỒNG HỒ,ĐIỆN MÁY)
+
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\app\Http\Controllers\Frontend\FrontendController
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\routes\web.php
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\resources\views\frontend\dienmay\cateProduct.blade,(details.blade),(dienmay.blade)
+..............
+
+
+
+các file trong thư mục: dienmay,laptop,tablet,dienthoai,phukien,dongho để hiển thị ra dl 
+
+
+<---------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+<---------------------------------------------------------------------------------------->
+BÌNH LUẬN SẢN PHẨM 
+
+
+php artisan make:migration vp_comment_dienthoai
+php artisan make:migration vp_comment_tablet
+php artisan make:migration vp_comment_laptop
+php artisan make:migration vp_comment_phukien
+php artisan make:migration vp_comment_dongho
+php artisan make:migration vp_comment_dienmay
+php artisan migrate
+
+php artisan make:model Models\CommentDienThoaiModel
+php artisan make:model Models\CommentTabletModel
+php artisan make:model Models\CommentLaptopModel
+php artisan make:model Models\CommentPhuKienModel
+php artisan make:model Models\CommentDongHoModel
+php artisan make:model Models\CommentDienMayModel
+
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\app\Http\Controllers\Frontend\FrontendController
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\routes\web.php
+
+b1:tạo cấu trúc bảng và kết nối với bảng
+b2:sử lý dl trong file FrontendController với hàm postCommentDienThoai  
+b3:sử lý phần nhập form trong file details và hiển thị phần comment
+
+các file trong thư mục: dienmay,laptop,tablet,dienthoai,phukien,dongho để hiển thị ra dl 
+
+
+
+<---------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+<---------------------------------------------------------------------------------------->
+GIỎ HÀNG  SẢN PHẨM  TRONG LARAVEL
+
+php artisan make:controller Frontend\CartController
+
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\app\Http\Controllers\Frontend\FrontendController
+E:\xampp\htdocs\Hoclaravel\demo\thuongmai\routes\web.php
+
+b1:cài đặt LaravelShoppingcart và cấu hinh
+b2:file CartController sử lý thêm,update,xóa giỏ hàng trong laravel
+b3:sử lý các file details trong các thư mục: dienmay,laptop,tablet,dienthoai,phukien,dongho để hiển thị ra dl 
+
+<---------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
